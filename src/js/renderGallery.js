@@ -1,14 +1,7 @@
-const imageToHtml = ({
-  webformatURL,
-  tags,
-  likes,
-  views,
-  comments,
-  downloads,
-}) => {
+const imageToHtml = ({ webformatURL, tags, likes, views, comments, downloads, largeImageURL }) => {
   return `
     <div class="photo-card">
-      <img src="${webformatURL}" alt="${tags}" loading="lazy" />
+      <a class="gallery-item" href="${largeImageURL}"><img src="${webformatURL}" alt="${tags}" loading="lazy" /></a>
       <div class="info">
         <p class="info-item">
           <b>likes</b>
